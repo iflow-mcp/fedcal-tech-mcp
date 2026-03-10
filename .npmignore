@@ -1,0 +1,68 @@
+# Development
+.claude
+CLAUDE.md
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts (but we need dist for the published package)
+# dist/  <- REMOVED: we need to include dist
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test
+coverage/
+
+# Turborepo
+.turbo/
+
+# SQLite databases (runtime data)
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# docs-site (exclude entire directory)
+docs-site/
+
+# Test files and configs
+vitest.config.ts
+tests/
+*.test.ts
+*.test.js
+
+# Documentation (keep README)
+docs/
+
+# Process logs
+*_process.log
+error_info.json
+push_info.json
+pipeline_result.json
+
+# Process result files
+process_result/
+
+# Package-specific files (not needed in published package)
+turbo.json
+tsconfig.base.json
+pnpm-workspace.yaml
+package_name
+language.json
