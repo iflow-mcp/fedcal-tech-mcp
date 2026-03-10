@@ -1,4 +1,4 @@
-# Development
+# Development files
 .claude
 CLAUDE.md
 
@@ -6,8 +6,7 @@ CLAUDE.md
 node_modules/
 .pnpm-store/
 
-# Build artifacts (but we need dist for the published package)
-# dist/  <- REMOVED: we need to include dist
+# Build artifacts (except dist which we need)
 *.tsbuildinfo
 
 # IDE
@@ -27,6 +26,10 @@ Thumbs.db
 
 # Test
 coverage/
+tests/
+*.test.ts
+*.test.js
+vitest.config.ts
 
 # Turborepo
 .turbo/
@@ -39,15 +42,6 @@ coverage/
 # Logs
 *.log
 
-# docs-site (exclude entire directory)
-docs-site/
-
-# Test files and configs
-vitest.config.ts
-tests/
-*.test.ts
-*.test.js
-
 # Documentation (keep README)
 docs/
 
@@ -57,12 +51,12 @@ error_info.json
 push_info.json
 pipeline_result.json
 
-# Process result files
-process_result/
-
 # Package-specific files (not needed in published package)
 turbo.json
 tsconfig.base.json
 pnpm-workspace.yaml
 package_name
 language.json
+
+# Exclude docs-site entirely
+docs-site/
